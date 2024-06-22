@@ -1,0 +1,25 @@
+<table
+  class="table table-striped"
+  *ngIf="getFormArray.length != 0; else noStdArray"
+>
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of getFormArray">
+      <td>{{ std.firstName }}</td>
+      <td>{{ std.lastName }}</td>
+      <td>{{ std.email }}</td>
+      <td>{{ std.contact }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noStdArray>
+  <p class="alert alert-danger">No Student Information Available</p>
+</ng-template>

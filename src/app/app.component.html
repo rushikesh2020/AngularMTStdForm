@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-md-1 col-md-8 mb-4">
+      <app-std-form (StdInfoEmit)="onGettingForm($event)"></app-std-form>
+    </div>
+
+    <div class="col-md-10">
+      <app-std-table [getFormArray]="stdArray"></app-std-table>
+    </div>
+  </div>
+</div>
